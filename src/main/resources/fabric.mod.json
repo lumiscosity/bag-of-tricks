@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "bagoftricks",
+	"version": "${version}",
+	"name": "Bag of Tricks",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/bagoftricks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lumiscosity.bagoftricks.BagOfTricks"
+		],
+		"client": [
+			"com.lumiscosity.bagoftricks.BagOfTricksClient"
+		]
+	},
+	"mixins": [
+		"bagoftricks.mixins.json",
+		{
+			"config": "bagoftricks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21-",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
